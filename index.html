@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Senha 1.0</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="box-1">
+        <img class="logo" src="./assets/logo.png" alt="Gerador De Senha">
+
+        <main class="container-input">
+            <span>Tamanho: <span id="valor"></span> caracteres.</span>
+            <input id="slider" class="slider" type="range" min="5" max="25" value="15">
+            
+            <p class="t_esc">Escolha a composição da sua senha:</p>
+            <form class="form_esc">
+            <input type="radio" id="ambs" name="escolha_marc" value="Letras e Numeros" class="radio1" checked>
+            <label class="label label-3" for="ambs">Numeros e Letras</label>
+            <input type="radio" id="nmr" name="escolha_marc" value="Apenas Numeros" class="radio1">
+            <label class="label label-1" for="nmr">Apenas Numeros</label><br>
+            <input type="radio" id="lts" name="escolha_marc" value="Apenas Letras" class="radio1">
+            <label class="label label-2" for="lts">Apenas Letras</label><br>
+            </form>
+
+            <button id="button" class="button-cta" onclick="generatePassword()">Gerar Senha</button>
+        </main>
+
+        <div id="container-password" class="container-password hide" onclick="copyPassword()">
+            <span class="title">Sua senha gerada foi:</span>
+            <span id="password" class="password"></span>
+            <span class="tooltip">Clique aqui para copiar 👆</span>
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
